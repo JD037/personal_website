@@ -1,0 +1,27 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.terminal {
+    background-color: black;
+    color: green;
+    font-family: 'Courier New', monospace;
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Add styles for your main content here */
+#main-content {
+    padding: 20px;
+}
