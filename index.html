@@ -7,9 +7,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="terminal" class="terminal">
-        <p id="message"></p>
+    <div id="loadingScreen">
+        <div id="loadingPercentage">0%</div>
+        <button id="enterSiteButton">Enter Site</button>
     </div>
+    <div id="terminal" class="terminal">
+        <span id="prompt">PS C:\Users\</span><span class="cursor"></span><span id="message"></span>
+    </div>
+    <audio id="matrixSoundtrack" src="./The Matrix.mp3" type="audio/mpeg" autoplay loop>
+        Your browser does not support the audio element.
+    </audio>
+    
 
     <div id="main-content" class="hidden">
         <!-- Main content of your website goes here -->
