@@ -17,10 +17,15 @@ matrixAudio.loop = true; // Set the audio to loop
 matrixAudio.muted = true; // Start with muted audio
 
 let fullMessages = [
-    "Gaining Remote Access\n",
-    "File Transfer Initiated....Completed\n",
-    "Press Y to view The Greatest Site Ever, or N to chicken out\n"
+  "Establishing secure connection...\n",
+  "Synchronizing data packets...\n",
+  "Decrypting user interface...\n",
+  "Connection established. Welcome to Josh Davis's Digital Portfolio.\n",
+  "Prepare to explore the synergy of tech and innovation...\n",
+  "Initiating immersive experience in 3... 2... 1...\n",
+  "Access Granted: Discover My Journey as a Developer."
 ];
+
 let currentMessageIndex = 0;
 let characterIndex = 0;
 let typingSpeed = 100;
