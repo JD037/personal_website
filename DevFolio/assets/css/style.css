@@ -93,6 +93,71 @@ a:hover {
   background-position: center center;
 }
 
+.terminal {
+  background-color: black;
+  color: green;
+  padding: 20px;
+  height: 100%;
+  text-align: left;
+  z-index: 1000;
+}
+
+.hidden {
+  display: none;
+}
+
+.cursor {
+  background-color: green;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+      background-color: transparent;
+  }
+}
+
+#message {
+  white-space: pre; /* Preserve whitespace and newlines */
+}
+
+/* Add the rest of your styles above */
+
+.cursor {
+  display: inline-block;
+  background-color: green;
+  width: 10px; /* Width of the cursor */
+  height: 18px; /* Approximately the line height of the text */
+  margin-left: 3px; /* Space between the text and cursor */
+  vertical-align: middle;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+      background-color: transparent;
+  }
+}
+
+
+.audio-control {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.audio-control:hover {
+  background-color: #555;
+}
+
+
 @media (max-width: 1024px) {
   .bg-image {
     background-attachment: scroll;
@@ -1067,8 +1132,12 @@ a:hover {
   margin-top: 1rem;
 }
 
+
+
 .testimonial-box .author-test img {
   margin: 0 auto;
+  width: 100px; /* Example width */
+  height: 100px; /* Example height */
 }
 
 .testimonial-box .author {

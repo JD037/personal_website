@@ -8,6 +8,63 @@
 (function() {
   "use strict";
 
+  // From loadscreenscript.js
+const terminal = document.getElementById('terminal');
+const messageElement = document.getElementById('message');
+const audioControlButton = document.getElementById('audioControl');
+const matrixAudio = new Audio('../The Matrix.mp3'); // Define the audio here
+matrixAudio.loop = true; // Set the audio to loop
+matrixAudio.muted = true; // Start with muted audio
+
+let fullMessages = [
+    "Gaining Remote Access\n",
+    "File Transfer Initiated....Completed\n",
+    "Press Y to view The Greatest Site Ever, or N to chicken out\n"
+];
+let currentMessageIndex = 0;
+let characterIndex = 0;
+let typingSpeed = 100;
+let pauseDuration = 2000;
+
+function typeMessage() {
+    let cursor = document.querySelector('.cursor');
+    if (currentMessageIndex < fullMessages.length) {
+        let text = fullMessages[currentMessageIndex];
+        let currentMessage = text.substring(0, characterIndex + 1);
+        messageElement.textContent = currentMessage;
+        terminal.appendChild(cursor); // Ensure cursor is always at the end
+        characterIndex++;
+
+        if (currentMessage === text) {
+            currentMessageIndex++;
+            characterIndex = 0;
+            if (currentMessageIndex < fullMessages.length) {
+                setTimeout(typeMessage, pauseDuration);
+            }
+        } else {
+            setTimeout(typeMessage, typingSpeed);
+        }
+    }
+}
+
+
+  // From loadscreenscript.js
+  audioControlButton.addEventListener('click', () => {
+    if (matrixAudio.muted || matrixAudio.paused) {
+        matrixAudio.muted = false;
+        matrixAudio.play().catch(err => console.error("Audio playback was prevented by the browser.", err));
+    } else {
+        matrixAudio.pause();
+    }
+    audioControlButton.textContent = matrixAudio.paused ? '🔈' : '🔊';
+  });
+  
+
+// Start Typing Effect and Attempt to Play Audio
+setTimeout(typeMessage, 1000);
+
+
+
   /**
    * Easy selector helper function
    */
