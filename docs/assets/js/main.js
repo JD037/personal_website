@@ -12,7 +12,7 @@
 const terminal = document.getElementById('terminal');
 const messageElement = document.getElementById('message');
 const audioControlButton = document.getElementById('audioControl');
-const matrixAudio = new Audio('../The Matrix.mp3'); // Define the audio here
+const matrixAudio = new Audio('/docs/The Matrix.mp3'); // Define the audio here
 matrixAudio.loop = true; // Set the audio to loop
 matrixAudio.muted = true; // Start with muted audio
 
