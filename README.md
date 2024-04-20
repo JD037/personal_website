@@ -1,5 +1,7 @@
 # Personal Website - Joshua Davis
 
+![Website screenshot](./docs/assets/img/readmess.png)
+
 This repository contains the code for my personal website, showcasing my portfolio, skills, and experiences as a full-stack web developer and 3D designer.
 
 ## Table of Contents
